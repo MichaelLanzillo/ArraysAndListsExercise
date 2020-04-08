@@ -14,24 +14,24 @@ namespace ArraysAndLists
 
             #region Arrays
             // Create an integer Array of size 50
-           
+            int[] array = new int[50];
 
             //Create a method to populate the number array with 50 random numbers that are between 0 and 50
-            
+            Populater(array);
 
             //Print the first number of the array
-                      
+            Console.WriteLine(array[0]);
 
             //Print the last number of the array            
-            
+            Console.WriteLine(array[array.Length-1]);
 
             //Use this method to print out your numbers from arrays or lists
-            
+
 
             //Reverse the contents of the array and then print the array out to the console.
             //Try for 2 different ways
             /*     Hint: Array._____(); Create a custom method     */
-            
+
 
             //Create a method that will set numbers that are a multiple of 3 to zero then print to the console all numbers
 
@@ -102,7 +102,12 @@ namespace ArraysAndLists
         private static void Populater(int[] numbers)
         {
             Random rng = new Random();
-            throw new NotImplementedException();
+            for (int i=0; i <=50; i++)
+            {
+
+            int number = rng.Next(numbers.Length + 1);
+            }
+            
         }       
 
         private static void ReverseArray(int[] array)
